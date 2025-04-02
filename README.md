@@ -128,8 +128,8 @@ sh ./tools/mim_slurm_test.sh $PARTITION mmdet $CONFIG $CHECKPOINT  --format-only
 You can also run training and testing without slurm by directly using mim for instance/semantic/panoptic segmentation like below:
 
 ```bash
-PYTHONPATH='.':$PYTHONPATH mim train mmdet $CONFIG $WORK_DIR
-PYTHONPATH='.':$PYTHONPATH mim train mmseg $CONFIG $WORK_DIR
+PYTHONPATH='.':$PYTHONPATH mim train mmdet $CONFIG --work-dir $WORK_DIR
+PYTHONPATH='.':$PYTHONPATH mim train mmseg $CONFIG --word-dir $WORK_DIR
 ```
 
 - PARTITION: the slurm partition you are using
